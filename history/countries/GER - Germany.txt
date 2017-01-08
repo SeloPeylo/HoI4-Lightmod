@@ -1,0 +1,456 @@
+﻿##################################
+# Modified by Selim
+##################################
+
+capital = 64
+
+oob = "GER_1936"
+
+# Starting tech
+set_technology = 
+{
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	gwtank = 1
+	basic_light_tank = 1
+	improved_light_tank = 1
+	basic_heavy_tank = 1
+	early_fighter = 1
+	fighter1 = 1
+	early_bomber = 1
+	tactical_bomber1 = 1
+	strategic_bomber1 = 1
+	CAS1 = 1
+	naval_bomber1 = 1
+	early_submarine = 1
+	basic_submarine = 1
+	early_destroyer = 1
+	basic_destroyer = 1
+	early_light_cruiser = 1
+	basic_light_cruiser = 1
+	early_heavy_cruiser = 1
+	early_battleship = 1
+	early_battlecruiser = 1
+	mobile_warfare = 1
+	trade_interdiction = 1
+	formation_flying = 1
+	synth_oil_experiments = 1
+	transport = 1
+}
+
+
+set_research_slots = 3
+set_convoys = 100
+set_national_unity = 0.1
+
+set_politics = 
+{
+
+	parties = 
+	{
+		democratic = 
+		{ 
+			popularity = 13
+		}
+
+		fascism = 
+		{
+			popularity = 45
+		}
+		
+		communism = 
+		{
+			popularity = 19
+		}
+		
+		neutrality = 
+		{
+			popularity = 23
+		}
+	}
+	
+	ruling_party = democratic
+	last_election = "1932.11.6"
+	election_frequency = 48
+	elections_allowed = yes
+
+}
+
+
+add_ideas = 
+{
+	paul_von_hindenburg
+	general_staff
+	limited_exports
+	disarmed_nation
+	civilian_economy
+}
+
+create_country_leader = 
+{
+	name = "Adolf Hitler"
+	desc = "POLITICS_ADOLF_HITLER_DESC"
+	picture = "Hitler.tga"
+	expire = "1965.1.1"
+	ideology = nazism
+	traits = {dictator}
+}
+
+create_country_leader = 
+{
+	name = "Kurt von Schleicher"
+	desc = "POLITICS_KURT_VON_SCHLEIER_DESC"
+	picture = "Kurt_von_Schleier.tga"
+	expire = "1965.1.1"
+	ideology = conservatism
+	traits = {}
+}
+
+add_namespace = 
+{
+	name = "ger_unit_leader"
+	type = unit_leader
+}
+
+create_field_marshal =
+{
+	name = "Kurt von Schleicher"
+	picture = "Kurt_von_Schleier.tga"
+	traits = {old_guard}
+	skill = 3
+	id = 900
+}
+
+create_field_marshal = 
+{
+	name = "Gerd von Rundstedt"
+	picture = "Gerd_von_Rundstedt.tga"
+	traits = {knight_cross_oak_sword defensive_doctrine offensive_doctrine}
+	skill = 3
+	id = 1
+}
+
+create_field_marshal = 
+{
+	name = "Günther von Kluge"
+	picture = "Gunther_von_Kluge.tga"
+	traits = {knight_cross_oak_sword offensive_doctrine}
+	skill = 3
+	id = 2
+}
+
+create_corps_commander = 
+{
+	name = "Friedrich Paulus"
+	picture = "Friedrich_Paulus.tga"
+	traits = {knight_cross_oak}
+	skill = 1
+	id = 3
+}
+
+create_corps_commander = 
+{
+	name = "Erwin Rommel"
+	picture = "Erwin_Rommel.tga"
+	traits = {knight_cross_diamond pour_le_merite order_of_michael trickster panzer_leader}
+	skill = 4
+	id = 4
+}
+
+create_corps_commander = 
+{
+	name = "Erich von Manstein"
+	picture = "Erich_von_Manstein.tga"
+	traits = {knight_cross_oak_sword trickster fortress_buster}
+	skill = 5
+	id = 5
+}
+
+create_corps_commander = 
+{
+	name = "Heinz Guderian"
+	picture = "Heinz_Guderian.tga"
+	traits = {knight_cross_oak trickster panzer_leader}
+	skill = 4
+	id = 6
+}
+
+create_corps_commander = 
+{
+	name = "Wilhelm List"
+	picture = "Wilhelm_List.tga"
+	traits = {knight_cross}
+	skill = 1
+	id = 7
+}
+
+create_corps_commander = 
+{
+	name = "Ewald von Kleist"
+	picture = "Ewald_von_Kleist.tga"
+	traits = {knight_cross_oak_sword}
+	skill = 1
+	id = 8
+}
+
+create_corps_commander = 
+{
+	name = "Fedor von Bock"
+	picture = "Fedor_von_Bock.tga"
+	traits = {knight_cross pour_le_merite}
+	skill = 4
+	id = 9
+}
+
+create_corps_commander = 
+{
+	name = "Walter Model"
+	picture = "Walter_Model.tga"
+	traits = {knight_cross_diamond iron_cross_1st}
+	skill = 1
+	id = 10
+}
+
+create_corps_commander = 
+{
+	name = "Maximilian von Weichs"
+	picture = "Maximilian_von_Weichs.tga"
+	traits = {knight_cross_oak}
+	skill = 4
+	id = 11
+}
+
+create_corps_commander = 
+{
+	name = "Wilhelm Ritter von Leeb"
+	picture = "Wilhelm_Ritter_von_Leeb.tga"
+	traits = {knight_cross order_of_joseph}
+	skill = 3
+	id = 13
+}
+
+create_corps_commander = 
+{
+	name = "Georg-Hans Reinhardt"
+	picture = "Georg_Hans_Reinhardt.tga"
+	traits = {knight_cross_oak_sword panzer_leader}
+	skill = 3
+	id = 14
+}
+
+create_corps_commander = 
+{
+	name = "Walter Krüger"
+	picture = "Walter_Kruger.tga"
+	traits = {knight_cross_oak_sword waffen_ss panzer_leader}
+	skill = 3
+	id = 15
+}
+
+create_corps_commander = 
+{
+	name = "Kurt Student"
+	picture = "Kurt_Student.tga"
+	traits = {knight_cross_oak commando}
+	skill = 4
+	id = 16
+}
+
+create_corps_commander = 
+{
+	name = "Erwin von Witzleben"
+	picture = "Erwin_von_Witzleben.tga"
+	traits = {knight_cross}
+	skill = 4
+	id = 17
+}
+
+create_corps_commander = 
+{
+	name = "Hermann Hoth"
+	picture = "Hermann_Hoth.tga"
+	traits = {knight_cross_oak_sword panzer_leader}
+	skill = 3
+	id = 18
+}
+
+create_corps_commander = 
+{
+	name = "Johannes Blaskowitz"
+	picture = "Johannes_Blaskowitz.tga"
+	traits = {knight_cross_oak_sword}
+	skill = 3
+	id = 19
+}
+
+create_corps_commander = 
+{
+	name = "Paul Hausser"
+	picture = "Paul_Hausser.tga"
+	traits = {knight_cross_oak_sword waffen_ss panzer_leader}
+	skill = 4
+	id = 20
+}
+
+create_corps_commander = 
+{
+	name = "Friedrich Schulz"
+	picture = "Friedrich_Schulz.tga"
+	traits = {knight_cross_oak_sword panzer_leader}
+	skill = 3
+	id = 21
+}
+
+create_corps_commander = 
+{
+	name = "Georg von Küchler"
+	picture = "Georg_von_Kuchler.tga"
+	traits = {knight_cross_oak}
+	skill = 4
+	id = 22
+}
+
+create_corps_commander = 
+{
+	name = "Alfred Jodl"
+	picture = "Alfred_Jodl.tga"
+	traits = {knight_cross_oak}
+	skill = 3
+	id = 23
+}
+
+create_corps_commander = 
+{
+	name = "Sepp Dietrich"
+	picture = "Sepp_Dietrich.tga"
+	traits = {knight_cross_diamond waffen_ss}
+	skill = 4
+	id = 24
+}
+
+create_corps_commander = 
+{
+	name = "Hasso von Manteuffel"
+		picture = "Hasso_von_Manteufel.tga"
+	traits = {knight_cross_diamond panzer_leader}
+	skill = 4
+	id = 25
+}
+
+create_corps_commander = 
+{
+	name = "Albert Kesselring"
+	picture = "Albert_Kesselring.tga"
+	traits = {knight_cross_diamond}
+	skill = 4
+	id = 32
+}
+
+create_corps_commander = 
+{
+	name = "Gotthard Heinrici"
+	picture = "Gotthard_Heinrici.tga"
+	traits = {knight_cross_oak_sword fortress_buster}
+	skill = 3
+
+	id = 33
+}
+
+create_corps_commander = 
+{
+	name = "Ernst-Eberhard Hell"
+	picture = "Ernst_Eberhard_Hell.tga"
+	traits = {knight_cross_oak winter_specialist fortress_buster}
+	skill = 3
+	id = 34
+}
+
+create_navy_leader = 
+{
+	name = "Karl Dönitz"
+		picture = "Karl_Donitz.tga"
+	traits = {knight_cross_oak iron_cross_1st seawolf }
+	skill = 5
+	id = 26
+}
+
+create_navy_leader = 
+{
+	name = "Erich Raeder"
+		picture = "Erich_Raeder.tga"
+	traits = {knight_cross blockade_runner}
+	skill = 4
+	id = 27
+}
+
+create_navy_leader = 
+{
+	name = "Alfred Saalwächter"
+		picture = "Alfred_Saalwachter.tga"
+	traits = {knight_cross old_guard_navy}
+	skill = 4
+	id = 28
+}
+
+create_navy_leader = 
+{
+	name = "Hermann Boehm"
+		picture = "Hermann_Boehm.tga"
+	traits = {iron_cross_1st superior_tactician}
+	skill = 4
+	id = 29
+}
+
+create_navy_leader = 
+{
+	name = "Wilhelm Marschall"
+		picture = "Wilhelm_Marshall.tga"
+	traits = {iron_cross_1st pour_le_merite old_guard_navy}
+	skill = 4
+	id = 30
+}
+
+create_navy_leader = 
+{
+	name = "Günther Lütjens"
+		picture = "Gunther_Lutjens.tga"
+	traits = {knight_cross superior_tactician}
+	skill = 3
+	id = 31
+}
+
+
+### Ship Variants ###
+## 1936 Start ##
+# Light Cruisers #
+create_equipment_variant = {
+	name = "Königsberg Class"
+	type = light_cruiser_1
+	parent_version = 0
+	upgrades = {
+		ship_reliability_upgrade = 2
+		ship_engine_upgrade = 2
+		ship_gun_upgrade = 2
+		ship_anti_air_upgrade = 2
+	}
+	obsolete = yes
+}
+# Heavy Cruisers #
+create_equipment_variant = {
+	name = "Deutschland Class"
+	type = heavy_cruiser_1
+	parent_version = 0
+	upgrades = {
+		ship_reliability_upgrade = 1
+		ship_engine_upgrade = 1
+		ship_armor_upgrade = 1
+		ship_gun_upgrade = 2
+	}
+}
