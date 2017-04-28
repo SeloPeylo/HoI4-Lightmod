@@ -1,0 +1,82 @@
+﻿##################################
+# Created by Selim
+# 28.04.2017
+##################################
+
+add_namespace = ger
+
+country_event = # Introduction Event
+{
+	id = ger.999
+	title = ger.999.t
+	desc = ger.999.d
+
+	fire_only_once = yes
+	trigger = {tag = GER}
+	mean_time_to_happen = {days = 3}
+
+	option =
+	{
+		name = ger.999.a
+		add_political_power = 1
+	}
+
+}
+
+### Reichstagswahl 1933
+
+country_event = # Reichstagswahl 1933
+{
+	id = ger.2
+	title = ger.2.t
+	desc = ger.2.d
+
+	fire_only_once = yes
+	trigger = {tag = GER date > 1933.03.04}
+	mean_time_to_happen = {days = 1}
+
+	option =
+	{
+		name = ger.2.a
+
+		hidden_effect = 
+		{
+			set_country_flag = elections_1933_start
+			country_event = {id = ger.3 days = 3}
+		}
+	}
+}
+
+country_event = # Reichstagswahl 1933
+{
+	id = ger.3
+	title = ger.3.t
+	desc = ger.3.d
+
+	is_triggered_only = yes
+
+	option = # Hitler wins
+	{
+		name = ger.3.a
+
+		set_country_flag = elections_1933_hitler
+	}
+	option = # Marxist Victory
+	{
+		name = ger.3.b
+
+		set_country_flag = elections_1933_marxist
+	}
+	option = # Conservative Victory
+	{
+		name = ger.3.c
+
+		set_country_flag = elections_1933_conservative
+	}
+	option = # Undecided
+	{
+		name = ger.3.e
+
+		set_country_flag = elections_1933_undecided
+	}
+}
