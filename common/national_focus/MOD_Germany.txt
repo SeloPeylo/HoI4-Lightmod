@@ -1,0 +1,251 @@
+##################################
+# Created by Selim
+# 28.04.2017
+##################################
+
+focus_tree = {
+	id = GER
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = GER
+		}
+	}
+	default = no
+
+
+### 1933 Elections
+## Y = 0
+
+	focus = # 1933 Elections
+	{
+		id = GER_1933_elections
+		icon = GFX_goal_support_democracy
+		cost = 5.00
+		available = { always = no }
+		bypass = { has_country_flag = elections_1933_start }
+		x = 3
+		y = 0
+		completion_reward = 
+		{
+			custom_effect_tooltip = GER_1933__elections_tooltip
+		}
+	}
+
+	## Y = 1
+
+	focus = # Hitler Wins
+	{
+		id = GER_hitler_wins
+		icon = GFX_goal_support_democracy
+		cost = 5.00
+		available = { always = no }
+		bypass = { has_country_flag = elections_1933_hitler }
+		x = 0
+		y = 1
+		prerequisite = {focus = GER_1933_elections}
+		completion_reward = 
+		{
+			custom_effect_tooltip = GER_1933_elections_hitler
+		}
+	}
+
+		focus = # Marxist Victory
+	{
+		id = GER_marxist_victory
+		icon = GFX_goal_support_democracy
+		cost = 5.00
+		available = { always = no }
+		bypass = { has_country_flag = elections_1933_marxist }
+		x = 2
+		y = 1
+		prerequisite = {focus = GER_1933_elections}
+		completion_reward = 
+		{
+			custom_effect_tooltip = GER_1933_elections_marxist
+		}
+	}
+
+		focus = # Conservative Victory
+	{
+		id = GER_conservative_victory
+		icon = GFX_goal_support_democracy
+		cost = 5.00
+		available = { always = no }
+		bypass = { has_country_flag = elections_1933_conservative }
+		x = 4
+		y = 1
+		prerequisite = {focus = GER_1933_elections}
+		completion_reward = 
+		{
+			custom_effect_tooltip = GER_1933_elections_conservative
+		}
+	}
+
+		focus = # Undecided
+	{
+		id = GER_undecided
+		icon = GFX_goal_support_democracy
+		cost = 5.00
+		available = { always = no }
+		bypass = { has_country_flag = elections_1933_undecided }
+		x = 6
+		y = 1
+		prerequisite = {focus = GER_1933_elections}
+		completion_reward = 
+		{
+			custom_effect_tooltip = GER_1933_elections_undecided
+		}
+	}
+
+	## Y = 2
+
+		focus = # Reichstagsbrand
+	{
+		id = GER_reichstagsbrand
+		icon = GFX_goal_support_democracy
+		cost = 5.00
+		available_if_capitulated = yes
+		x = 0
+		y = 2
+		prerequisite = {focus = GER_hitler_wins}
+		completion_reward = 
+		{
+
+		}
+	}
+
+		focus = # Awake the Proletariat
+	{
+		id = GER_awake_proletariat
+		icon = GFX_goal_support_democracy
+		cost = 5.00
+		available_if_capitulated = yes
+		x = 2
+		y = 2
+		prerequisite = {focus = GER_marxist_victory}
+		completion_reward = 
+		{
+
+		}
+	}
+
+	focus = # Volksversammlung
+	{
+		id = GER_volksversammlung
+		icon = GFX_goal_support_democracy
+		cost = 5.00
+		available_if_capitulated = yes
+		x = 4
+		y = 2
+		prerequisite = {focus = GER_conservative_victory}
+		completion_reward = 
+		{
+
+		}
+	}
+
+	focus = # Dissolve the Reichstag
+	{
+		id = GER_dissolve_reichstag
+		icon = GFX_goal_support_democracy
+		cost = 5.00
+		available_if_capitulated = yes
+		x = 6
+		y = 2
+		prerequisite = {focus = GER_undecided}
+		completion_reward = 
+		{
+
+		}
+	}
+
+	## Y = 3
+
+	focus = # Reelection
+	{
+		id = GER_reelection
+		icon = GFX_goal_support_democracy
+		cost = 5.00
+		available_if_capitulated = yes
+		x = 3
+		y = 3
+		prerequisite = 
+		{
+			focus = GER_reichstagsbrand
+			focus = GER_awake_proletariat
+			focus = GER_volksversammlung
+			focus = GER_dissolve_reichstag
+		}
+		completion_reward = 
+		{
+
+		}
+	}
+
+	## Y = 4
+
+	focus = # Ermächtigungsgesetz
+	{
+		id = GER_ermachtigungsgesetz
+		icon = GFX_goal_support_democracy
+		cost = 5.00
+		available_if_capitulated = yes
+		available = { has_country_flag = GER_reichstagsbrand }
+		x = 0
+		y = 4
+		prerequisite = {focus = GER_reelection}
+		completion_reward = 
+		{
+
+		}
+	}
+
+	focus = # Ban the Nazis
+	{
+		id = GER_ban_nazis
+		icon = GFX_goal_support_democracy
+		cost = 5.00
+		available_if_capitulated = yes
+		available = { has_country_flag = GER_awake_proletariat }
+		x = 2
+		y = 4
+		prerequisite = {focus = GER_reelection}
+		completion_reward = 
+		{
+
+		}
+	}
+
+	focus = # Write a new Constitution
+	{
+		id = GER_new_constitution
+		icon = GFX_goal_support_democracy
+		cost = 5.00
+		available_if_capitulated = yes
+		available = { has_country_flag = GER_volksversammlung }
+		x = 4
+		y = 4
+		prerequisite = {focus = GER_reelection}
+		completion_reward = 
+		{
+
+		}
+	}
+
+	focus = # Coup d'etat
+	{
+		id = GER_coup_detat
+		icon = GFX_goal_support_democracy
+		cost = 5.00
+		available_if_capitulated = yes
+		available = { has_country_flag = GER_undecided }
+		x = 6
+		y = 4
+		prerequisite = {focus = GER_reelection}
+		completion_reward = 
+		{
+
+		}
+	}
