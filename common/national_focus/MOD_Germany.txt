@@ -25,15 +25,14 @@ focus_tree = {
 		cost = 5.00
 
 		available = { always = no }
-		bypass = { has_country_flag = elections_1933_start }
+		bypass = { has_country_flag = GER_elections_1933_start }
 
 		x = 3
 		y = 0
 
 		completion_reward = 
 		{
-			custom_effect_tooltip = GER_1933__elections_tooltip
-			
+			custom_effect_tooltip = GER_1933_elections_start
 		}
 	}
 
@@ -46,12 +45,12 @@ focus_tree = {
 		cost = 5.00
 
 		available = { always = no }
-		bypass = { has_country_flag = elections_1933_hitler }
+		bypass = { has_country_flag = GER_elections_1933_hitler }
 
 		x = 0
 		y = 1
 
-		prerequisite = {focus = GER_1933_elections}
+		prerequisite = { focus = GER_1933_elections }
 		completion_reward = 
 		{
 			custom_effect_tooltip = GER_1933_elections_hitler
@@ -65,12 +64,12 @@ focus_tree = {
 		cost = 5.00
 
 		available = { always = no }
-		bypass = { has_country_flag = elections_1933_marxist }
+		bypass = { has_country_flag = GER_elections_1933_marxist }
 
 		x = 2
 		y = 1
 
-		prerequisite = {focus = GER_1933_elections}
+		prerequisite = { focus = GER_1933_elections }
 		completion_reward = 
 		{
 			custom_effect_tooltip = GER_1933_elections_marxist
@@ -84,7 +83,7 @@ focus_tree = {
 		cost = 5.00
 
 		available = { always = no }
-		bypass = { has_country_flag = elections_1933_conservative }
+		bypass = { has_country_flag = GER_elections_1933_conservative }
 
 		x = 4
 		y = 1
@@ -103,12 +102,12 @@ focus_tree = {
 		cost = 5.00
 
 		available = { always = no }
-		bypass = { has_country_flag = elections_1933_undecided }
+		bypass = { has_country_flag = GER_elections_1933_undecided }
 
 		x = 6
 		y = 1
 
-		prerequisite = {focus = GER_1933_elections}
+		prerequisite = { focus = GER_1933_elections }
 		completion_reward = 
 		{
 			custom_effect_tooltip = GER_1933_elections_undecided
@@ -127,7 +126,7 @@ focus_tree = {
 		x = 0
 		y = 2
 
-		prerequisite = {focus = GER_hitler_wins}
+		prerequisite = { focus = GER_hitler_wins }
 		completion_reward = 
 		{
 
@@ -144,7 +143,7 @@ focus_tree = {
 		x = 2
 		y = 2
 
-		prerequisite = {focus = GER_marxist_victory}
+		prerequisite = { focus = GER_marxist_victory }
 		completion_reward = 
 		{
 
@@ -178,7 +177,7 @@ focus_tree = {
 		x = 6
 		y = 2
 
-		prerequisite = {focus = GER_undecided}
+		prerequisite = { focus = GER_undecided }
 		completion_reward = 
 		{
 
@@ -219,12 +218,12 @@ focus_tree = {
 		cost = 5.00
 		available_if_capitulated = yes
 
-		available = { has_country_flag = GER_reichstagsbrand }
+		available = { has_country_flag = GER_elections_1933_hitler }
 
 		x = 0
 		y = 4
 
-		prerequisite = {focus = GER_reelection}
+		prerequisite = { focus = GER_reelection }
 		completion_reward = 
 		{
 
@@ -238,12 +237,12 @@ focus_tree = {
 		cost = 5.00
 		available_if_capitulated = yes
 
-		available = { has_country_flag = GER_awake_proletariat }
+		available = { has_country_flag = GER_elections_1933_marxist }
 
 		x = 2
 		y = 4
 
-		prerequisite = {focus = GER_reelection}
+		prerequisite = { focus = GER_reelection }
 		completion_reward = 
 		{
 
@@ -257,11 +256,11 @@ focus_tree = {
 		cost = 5.00
 		available_if_capitulated = yes
 
-		available = { has_country_flag = GER_volksversammlung }
+		available = { has_country_flag = GER_elections_1933_conservative }
 
 		x = 4
 		y = 4
-		prerequisite = {focus = GER_reelection}
+		prerequisite = { focus = GER_reelection }
 		completion_reward = 
 		{
 
@@ -275,12 +274,12 @@ focus_tree = {
 		cost = 5.00
 		available_if_capitulated = yes
 
-		available = { has_country_flag = GER_undecided }
+		available = { has_country_flag = GER_elections_1933_undecided }
 
 		x = 6
 		y = 4
 
-		prerequisite = {focus = GER_reelection}
+		prerequisite = { focus = GER_reelection }
 		completion_reward = 
 		{
 
